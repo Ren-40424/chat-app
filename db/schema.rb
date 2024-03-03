@@ -50,8 +50,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_02_140205) do
   end
 
   create_table "room_users", charset: "utf8", force: :cascade do |t|
-    t.bigint "room_id"
-    t.bigint "user_id"
+    t.bigint "room_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_room_users_on_room_id"
